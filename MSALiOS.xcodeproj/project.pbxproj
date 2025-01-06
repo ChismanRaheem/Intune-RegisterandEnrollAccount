@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18712FB92D1B0A2500FCD520 /* IntuneMAMSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18712FB82D1B0A2500FCD520 /* IntuneMAMSwift.xcframework */; };
+		18712FBA2D1B0A2500FCD520 /* IntuneMAMSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18712FB82D1B0A2500FCD520 /* IntuneMAMSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18712FBD2D1B0AB800FCD520 /* IntuneMAMSwiftStub.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18712FBC2D1B0AB800FCD520 /* IntuneMAMSwiftStub.xcframework */; };
+		18712FBE2D1B0AB800FCD520 /* IntuneMAMSwiftStub.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18712FBC2D1B0AB800FCD520 /* IntuneMAMSwiftStub.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18712FC12D23788E00FCD520 /* UiUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18712FC02D23787B00FCD520 /* UiUtils.swift */; };
+		18712FC32D23857D00FCD520 /* EnrollmentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18712FC22D237AC500FCD520 /* EnrollmentDelegate.swift */; };
 		4DC17E926BAC0BBF780DD200 /* Pods_MSALiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5263E088346F01270DB01B /* Pods_MSALiOS.framework */; };
 		FBA79EA11E9A038700179A54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA79EA01E9A038700179A54 /* AppDelegate.swift */; };
 		FBA79EA31E9A038700179A54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA79EA21E9A038700179A54 /* ViewController.swift */; };
@@ -15,7 +21,26 @@
 		FBA79EAB1E9A038700179A54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA79EA91E9A038700179A54 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		18712FBB2D1B0A2500FCD520 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				18712FBE2D1B0AB800FCD520 /* IntuneMAMSwiftStub.xcframework in Embed Frameworks */,
+				18712FBA2D1B0A2500FCD520 /* IntuneMAMSwift.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		18712FB82D1B0A2500FCD520 /* IntuneMAMSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IntuneMAMSwift.xcframework; path = "../../../Downloads/ms-intune-app-sdk-ios-main/IntuneMAMSwift.xcframework"; sourceTree = "<group>"; };
+		18712FBC2D1B0AB800FCD520 /* IntuneMAMSwiftStub.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IntuneMAMSwiftStub.xcframework; path = "../../../Downloads/ms-intune-app-sdk-ios-main/IntuneMAMSwiftStub.xcframework"; sourceTree = "<group>"; };
+		18712FC02D23787B00FCD520 /* UiUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiUtils.swift; sourceTree = "<group>"; };
+		18712FC22D237AC500FCD520 /* EnrollmentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentDelegate.swift; sourceTree = "<group>"; };
 		AD5263E088346F01270DB01B /* Pods_MSALiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSALiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CBF881BF504F0A15F7FD5C /* Pods-MSALiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSALiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSALiOS/Pods-MSALiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DF06CB9178C218430A5EDADB /* Pods-MSALiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSALiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSALiOS/Pods-MSALiOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -35,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18712FB92D1B0A2500FCD520 /* IntuneMAMSwift.xcframework in Frameworks */,
+				18712FBD2D1B0AB800FCD520 /* IntuneMAMSwiftStub.xcframework in Frameworks */,
 				4DC17E926BAC0BBF780DD200 /* Pods_MSALiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +72,8 @@
 		AED3371A3BA5BB965217412E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18712FBC2D1B0AB800FCD520 /* IntuneMAMSwiftStub.xcframework */,
+				18712FB82D1B0A2500FCD520 /* IntuneMAMSwift.xcframework */,
 				AD5263E088346F01270DB01B /* Pods_MSALiOS.framework */,
 			);
 			name = Frameworks;
@@ -89,12 +118,14 @@
 			isa = PBXGroup;
 			children = (
 				FBBE35B41E9DAE6C00460053 /* MSALiOS.entitlements */,
+				18712FC22D237AC500FCD520 /* EnrollmentDelegate.swift */,
 				FBA79EA01E9A038700179A54 /* AppDelegate.swift */,
 				FBA79EA21E9A038700179A54 /* ViewController.swift */,
 				FBA79EA41E9A038700179A54 /* Main.storyboard */,
 				FBA79EA71E9A038700179A54 /* Assets.xcassets */,
 				FBA79EA91E9A038700179A54 /* LaunchScreen.storyboard */,
 				FBA79EAC1E9A038700179A54 /* Info.plist */,
+				18712FC02D23787B00FCD520 /* UiUtils.swift */,
 			);
 			path = MSALiOS;
 			sourceTree = "<group>";
@@ -111,6 +142,7 @@
 				FBA79E9A1E9A038700179A54 /* Frameworks */,
 				FBA79E9B1E9A038700179A54 /* Resources */,
 				62FF8D48DDB503F027F22D2C /* [CP] Embed Pods Frameworks */,
+				18712FBB2D1B0A2500FCD520 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,7 +165,6 @@
 				TargetAttributes = {
 					FBA79E9C1E9A038700179A54 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = UBF8T346G9;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -227,6 +258,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBA79EA31E9A038700179A54 /* ViewController.swift in Sources */,
+				18712FC12D23788E00FCD520 /* UiUtils.swift in Sources */,
+				18712FC32D23857D00FCD520 /* EnrollmentDelegate.swift in Sources */,
 				FBA79EA11E9A038700179A54 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,7 +392,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -373,11 +407,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MSALiOS/MSALiOS.entitlements;
-				DEVELOPMENT_TEAM = UBF8T346G9;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MSALiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.identitysample.MSALiOS;
 				PRODUCT_NAME = MSALiOS;
@@ -394,11 +431,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MSALiOS/MSALiOS.entitlements;
-				DEVELOPMENT_TEAM = UBF8T346G9;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MSALiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.identitysample.MSALiOS;
 				PRODUCT_NAME = MSALiOS;
