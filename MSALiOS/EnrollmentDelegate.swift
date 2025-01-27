@@ -88,4 +88,15 @@ class EnrollmentDelegateClass: NSObject, IntuneMAMEnrollmentDelegate {
         }
         
     }
+    
+    
+    func policyRequest(with status: IntuneMAMEnrollmentStatus) {
+        var msg = ""
+        if status.didSucceed {
+            msg = "Policy fetch successful!"
+        } else {
+            msg = ("Policy fetch result for identity \(status.identity) with status code \(status.statusCode)") + (" Debug message: \(String(describing: status.errorString))")
+        }
+        print(msg)
+    }
 }

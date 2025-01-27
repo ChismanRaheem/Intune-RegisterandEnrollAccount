@@ -35,6 +35,8 @@
 		<string>msauth</string>
 		<string>msauthv2</string>
 		<string>msauthv3</string>
+		<string>https-intunemam</string>
+		<string>http-intunemam</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -61,14 +63,14 @@
 	</array>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
-<key>IntuneMAMSettings</key>
-<dict>
-<key>ADALClientId</key>
-<string>6917d46a-bf25-4974-aa81-81cd986eff2c</string>
-<key>ADALRedirectUri</key>
-<string>msauth.com.microsoft.identitysample.MSALiOS://auth</string>
-<key>ADALAuthority</key>
-<string>https://login.microsoftonline.com/85086bfd-eeee-40c4-b751-ea94d9159ea3/</string>
-</dict>
+	<key>IntuneMAMSettings</key>
+	<dict>
+		<key>ADALClientId</key>
+		<string>&lt;Clientid&gt;</string>
+		<key>ADALRedirectUri</key>
+		<string>msauth.com.microsoft.identitysample.MSALiOS://auth</string>
+		<key>ADALAuthority</key>
+		<string>https://login.microsoftonline.com/common/</string>
+	</dict>
 </dict>
 </plist>

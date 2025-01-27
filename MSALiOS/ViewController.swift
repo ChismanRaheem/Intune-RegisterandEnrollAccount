@@ -11,7 +11,7 @@ import IntuneMAMSwift
 
 class ViewController: UIViewController {
 
-    let kClientID = "<Client ID>"     // Update this to your client ID.
+    let kClientID = "<ClientId Here>"     // Update this to your client ID.
     let kGraphEndpoint = "https://graph.microsoft.com/" // the Microsoft Graph endpoint
     let kAuthority = "https://login.microsoftonline.com/common" // this authority allows a personal Microsoft account and a work or school account in any organization's Azure AD tenant to sign in
 
@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     var signOutButton: UIButton!
     var callGraphButton: UIButton!
     var usernameLabel: UILabel!
+    
+    
     
     var registerEnrollButton: UIButton!
     var UnEnrollButton: UIButton!
@@ -420,6 +422,8 @@ class ViewController: UIViewController {
             } else {
                 self.updateLogging(text: "Running on older iOS. GetDeviceInformation API is unavailable.")
             }
+        
+        IntuneMAMDiagnosticConsole.display()
     }
     
     @objc func registerEnroll(_ sender: UIButton) {
@@ -429,44 +433,30 @@ class ViewController: UIViewController {
             return
         }
         
-        let accountIdentifier = account.identifier ?? ""
-        let upn=account.username ?? ""
-        print("Trigger enrollment request. User name: " + (upn))
+        //Login the user through the Intune sign in flow. EnrollmentDelegateClass will handle the outcome of this.
+        let accountIdentifier = account.homeAccountId?.objectId ?? ""
+        print("Guid/Account OID:" + (accountIdentifier))
         
         IntuneMAMEnrollmentManager.instance().registerAndEnrollAccountId(accountIdentifier)
         
-    }
-         /*
-          Located below are diffent entries for testing
-          */
-           //let parts = accountIdentifier.split(separator: ".")
-          //let parts = accountIdentifier.substring(to: accountIdentifier.index(accountIdentifier.endIndex, offsetBy: -19))
-         //IntuneMAMEnrollmentManager.instance().registerAndEnrollAccountId(String(parts.first))
-        //IntuneMAMEnrollmentManager.instance().registerAndEnrollAccountId(String(parts))
-
         
-        //Login the user through the Intune sign in flow. EnrollmentDelegateClass will handle the outcome of this.
-        //print("Trigger enrollment request. User name: " + (account.homeAccountId ?? ""))
-        //IntuneMAMEnrollmentManager.instance().registerAndEnrollAccount(account.username ?? "")
-        //IntuneMAMEnrollmentManager.instance().registerAndEnrollAccountId(MSALAccountId(account.homeAccountId!)
-       
-    
+    }
     @objc func UnEnroll(_ sender: UIButton) {
         guard let applicationContext = self.applicationContext else { return }
         guard let account = self.currentAccount else {
             self.updateLogging(text: "No account found for Unenrollment, need to login and enroll first!")
             return
         }
-        
+        let accountIdentifier = account.homeAccountId?.objectId ?? ""
         //Login the user through the Intune sign in flow. EnrollmentDelegateClass will handle the outcome of this.
-        //print("Trigger Unenroll request. User name: " + (account.homeAccountId ?? ""))
-        //IntuneMAMEnrollmentManager.instance().deRegisterAndUnenrollAccount((account.homeAccountId), withWipe: false)
+        print("Trigger Unenroll request. User name: " + (accountIdentifier))
+        IntuneMAMEnrollmentManager.instance().deRegisterAndUnenrollAccountId((accountIdentifier), withWipe: false)
     }
     
     override func viewDidLoad() {
 
             super.viewDidLoad()
-
+        
             initUI()
 
             do {

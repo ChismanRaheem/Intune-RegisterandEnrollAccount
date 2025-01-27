@@ -101,4 +101,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IntuneMAMEnrollmentManager.instance().delegate = self.enrollmentDelegate
         return true
     }
+    
 }
