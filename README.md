@@ -1,8 +1,8 @@
 ---
-page_type: sample
+page_type: Sample 
 languages:
 - swift
-description: "Intune Integration with the MSAL preview library for iOS and macOS gives your app the ability to begin using the Microsoft Cloud by supporting Microsoft Entra ID and Microsoft Accounts in a converged experience using industry standard OAuth2 and OpenID Connect."
+description: "Intune Integration using registerAndEnrollAccountId method with the MSAL preview library for iOS and macOS gives your app the ability to begin using the Microsoft Cloud by supporting Microsoft Entra ID and Microsoft Accounts in a converged experience using industry standard OAuth2 and OpenID Connect."
 urlFragment: ios-ms-graph-api
 ---
 
